@@ -1,12 +1,12 @@
-$ prog2wphtml.rb
+# prog2wphtml.rb
 
-$$ Description
+## Description
 
 Wordpress.com has a rudimentary tool for publishing program code in a blog. If you want to divide your program into small segments and provide an explaination of the code's function, you can use the [sourcecode] tag for your code. The problem is that any change requires renumbering all the following [sourcecode] tags to match the new line numbering. 
 
 The input to prog2wphtml.rb is a file of code that contains the annotations within. Start the annotation lines with a #- or //- . That is, your language's comment character(s) followed by a dash and and space.
 
-$$ Usage
+## Usage
 
 Copy prog2wphtml.rb into the same directory as your program and modify the first few lines to reflect your files, like this:
 
@@ -19,7 +19,7 @@ Copy prog2wphtml.rb into the same directory as your program and modify the first
 When you run prog2wphtml.rb with ruby, the myprogram_code file will contain a *clean* version of your program without the annotation. The myprogram_wphtml.txt file will contain the html code to paste into WordPress. All of the line numbers in the Wordpress html will match the clean code. 
 
 
-$$ Example:
+## Example:
 
 The myprogram.py file with annotation:
 
@@ -68,11 +68,11 @@ The myprogram_code.py file after running prog2wphtml.rb
       ...
     end
 
-$$ Referencing line numbers
+## Referencing line numbers
 
 You can include references to lines with in your annotated code using *line * followed by a number. For example if a annotation referred to line 435 in the annotated file, something like: <i>Note that removing line 435 will cause the internet to crash.</i> the 435 would be adjusted to the correct line number in the myprogram_code file.
 
-$$ License:
+## License:
 
 (The MIT License)
 
